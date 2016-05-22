@@ -13,10 +13,10 @@ var User = mongoose.model('User');
 var Quote = mongoose.model('Quote');
 var Game = mongoose.model('Game');
 
-var u1 = new User({ name: 'Foo', email: 'foo11@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0100 (CET)', password: '3858f62230ac3cf300c664312c63f', poke: "45" });
-var u2 = new User({ name: 'Foo2', email: 'foo12@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0200 (CET)', password: '3858f62230ac3c915f300c6612c63f', poke: "46" });
-var u3 = new User({ name: 'Foo3', email: 'foo1@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0400 (CET)', password: '58f62230ac3c915f300c664312c63f', poke: "33" });
-var u4 = new User({ name: 'Foo411', email: 'foo111@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0700 (CET)', password: '3858f620ac3c915f300c664312c63f', poke: "77" });
+var u1 = new User({ name: 'PokeWizard', email: 'foo11@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0100 (CET)', password: '3858f62230ac3cf300c664312c63f', poke: "45" });
+var u2 = new User({ name: 'Cahrkich', email: 'beef@taco.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0200 (CET)', password: '3858f62230ac3c915f300c6612c63f', poke: "46" });
+var u3 = new User({ name: 'asdficlaus', email: 'fish@burger.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0400 (CET)', password: '58f62230ac3c915f300c664312c63f', poke: "33" });
+var u4 = new User({ name: 'dfadisours', email: 'chicken@float.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0700 (CET)', password: '3858f620ac3c915f300c664312c63f', poke: "77" });
 
 u1.save(function(err) {});
 u2.save(function(err) {});

@@ -9,7 +9,7 @@ module.exports = function (app, mongoose) {
             },
             auto_reconnect:true
         };
-        mongoose.connect(process.env.MongoDB_URI || config.get('chesshub.db'), options);
+        mongoose.connect((process.env.MONGODB_URI || config.get('chesshub.db')), options);
     };
     connect();
 

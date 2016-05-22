@@ -169,3 +169,14 @@ h3 {
     text-shadow: 1px 1px 1px #ccc;
     font-size: 1.4em;
 }
+.footer {
+    padding-top: 19px;
+    color: #FF3030;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+.fa-trash:before {
+    color: saddlebrown;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.4em;
+}

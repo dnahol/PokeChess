@@ -5,6 +5,7 @@ var UserSchema = mongoose.Schema({
     name: String,
     email: String,
     password: String,
+    poke: String,
     lastConnection: { type: Date, default: Date.now }
 });
 

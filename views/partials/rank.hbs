@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-info ">
@@ -12,10 +6,12 @@
             </div>
             <form id="userSearchForm" role="form">
                 <div class="panel-body">
-                  <p> Do some action here! </p>
+                    <p> Do some action here! </p>
                 </div>
                 <div class="panel-footer">
-                    <p><button id="searchUserFormSubmit" type="button" class="btn btn-default center-block">Submit</button></p>
+                    <p>
+                        <button id="searchUserFormSubmit" type="button" class="btn btn-default center-block">Submit</button>
+                    </p>
                 </div>
             </form>
         </div>
@@ -23,28 +19,71 @@
 </div>
 
 <div class="row">
-      <div class="panel panel-default">
+    <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Pokemon Master Rank</div>
         <table id="foundUsersTable" class="table table-bordered table-striped table-condensed table-hover">
             <thead>
-            <tbody>
-              {{#each users}}
-              <tr>
-                <td colspan="5">
-                  <div class="text-center">Name: {{name}}</div>
-                </td>
-                <td colspan="5">
-                  <div class="text-center">Email: {{email}}</div>
-                </td>
-                <td colspan="5">
-                  <div class="text-center"><button type="button" class"btn btn-success btn-xs"> View Pokemon</button></div>
-                </td>
-              </tr>
-              {{/each}}
-            </tbody>
-            <tfoot>
-            </tfoot>
+                <tbody>
+                    {{#each users}}
+                        <tr>
+                            <td colspan="5">
+                                <div class="text-center">Name: {{name}}</div>
+                            </td>
+                            <td colspan="5">
+                                <div class="text-center">Email: {{email}}</div>
+                            </td>
+                            <td colspan="5">
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal">
+                                        View PokeRank
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                </tfoot>
         </table>
     </div>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="pokeRankPopup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pokemon</h4>
+            </div>
+            <div class="modal-body">
+                <p id="pokeRank"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="/" class="btn btn-danger">Return to home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

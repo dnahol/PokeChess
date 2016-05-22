@@ -46,6 +46,7 @@ var play = require('./routes/play');
 var login = require('./routes/login');
 var register = require('./routes/register');
 var search = require('./routes/search');
+var users = require('./routes/rank')
 
 app.use('/', routes);
 app.use('/login', login);
@@ -54,6 +55,7 @@ app.use('/account', account);
 app.use('/play', play);
 app.use('/api', api);
 app.use('/search', search);
+app.use('/rank', users);
 
 // configure error handlers
 require('./config/errorHandlers.js')(app);

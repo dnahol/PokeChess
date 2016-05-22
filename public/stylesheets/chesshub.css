@@ -137,3 +137,46 @@ h3 {
 	font-size: 50px;
 	font-weight: bold;
 }
+.piece-key-img {
+	width: 40px;
+}
+.clock {
+  background-image: url("http://s32.postimg.org/nicyvbjw5/clock.png");
+  background-size: cover;
+}
+.fa-cc-discover:before {
+    color: #FF6000;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-cc-amex:before {
+    color: dodgerblue;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-cc-stripe:before {
+    color: crimson;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-cc-diners-club:before {
+    color: darkslategray;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-cc-jcb:before {
+    color: rebeccapurple;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-btc:before {
+    color: #4d9900;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.4em;
+}
+.footer {
+    padding-top: 19px;
+    color: #FF3030;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+.fa-trash:before {
+    color: saddlebrown;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.4em;
+}

@@ -470,3 +470,32 @@ $( document ).ready(function() {
         });
     }
 });
+/*
+ * Search User page
+ */
+// if ($("#searchUserForm")) {
+//     $( "#searchUserFormSubmit" ).on("click", function( event ) {
+//                 var users = data.users;
+//                 console.log('Jqueryusers: ', users);
+//                 console.log(users.length);
+//                 $('#foundUsersTable tbody tr').remove();
+//                 for (var i = 0; i < users.length; i++) {
+//                     var user = "<tr>" +
+//                         "<td>" + users[i].name + "</td>" +
+//                         "<td>" + users[i].score + "</td>" +
+//                         "<td>" + users[i].score + ".jpg </td>" +
+//                         "<td>" + "<a title='Not implemented' href='#'><i class='fa fa-eye'></i> Preview</a>" + "</td>" +
+//                         "</tr>";
+//                     $('#foundUsersTable tbody').append(user);
+//                 }
+//                 $('#totalFoundUsers').html(users.length);
+//                 $("#searchResult").show();
+//             },
+//             error: function() {
+//                 console.log()
+//                 alert("Error while searching users!");
+//             }
+//         });
+//         event.preventDefault();
+//     });
+// };

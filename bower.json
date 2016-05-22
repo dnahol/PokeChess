@@ -1,11 +1,11 @@
 {
   "name": "gamehub.io",
   "version": "1.0.0",
-  "homepage": "https://github.com/benas/gamehub.io",
+  "homepage": "https://github.com/bacopa/PokeChess",
   "authors": [
-    "Mahmoud Ben Hassine"
+    "thepokechessteam"
   ],
-  "description": "Chess Hub web application",
+  "description": "Pokemon plus chess. Because we can.",
   "moduleType": [
     "globals"
   ],

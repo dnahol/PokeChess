@@ -9,6 +9,7 @@ var router = express.Router();
 router.get('/', function(req, res) {
    mongoose.model('Quote').find({}, function(err, quotes) {
         var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        console.log('RandQuote: ', randomQuote);
         mongoose.model('Puzzle').find({}, function(err, puzzles) {
            var randomPuzzle = puzzles[Math.floor(Math.random() * puzzles.length)];
            var logoutSuccessMessage = req.flash('logoutSuccess');

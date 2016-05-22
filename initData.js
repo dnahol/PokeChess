@@ -13,13 +13,21 @@ var User = mongoose.model('User');
 var Quote = mongoose.model('Quote');
 var Game = mongoose.model('Game');
 
-var u = new User({ name: 'Foo', email: 'foo@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0100 (CET)', password: '3858f62230ac3c915f300c664312c63f' });
-u.save(function(err) {});
+var u1 = new User({ name: 'PokeWizard', email: 'foo11@bar.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0100 (CET)', password: '3858f62230ac3cf300c664312c63f', poke: "45" });
+var u2 = new User({ name: 'Cahrkich', email: 'beef@taco.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0200 (CET)', password: '3858f62230ac3c915f300c6612c63f', poke: "46" });
+var u3 = new User({ name: 'asdficlaus', email: 'fish@burger.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0400 (CET)', password: '58f62230ac3c915f300c664312c63f', poke: "33" });
+var u4 = new User({ name: 'dfadisours', email: 'chicken@float.org', lastConnection: 'Sun Nov 02 2014 11:16:56 GMT+0700 (CET)', password: '3858f620ac3c915f300c664312c63f', poke: "77" });
 
-var q1 = new Quote({author: 'Garry Kasparov', content: 'The highest art of the chess player lies in not allowing your opponent to show you what he can do.'});
-var q2 = new Quote({author: 'Boris Spassky', content: 'The best indicator of a chess player form is his ability to sense the climax of the game.'});
-var q3 = new Quote({author: 'V. Anand', content: 'Nowadays, when you are not a grandmaster at 14, you can forget about it.'});
-var q4 = new Quote({author: 'Magnus Carlsen', content: 'Some people think that if their opponent plays a beautiful game, it’s OK to lose. I don’t. You have to be merciless.'});
+u1.save(function(err) {});
+u2.save(function(err) {});
+u3.save(function(err) {});
+u4.save(function(err) {});
+
+
+var q1 = new Quote({author: 'Garry Kasparov', content: 'The highest art of the chess player lies in not allowing your opponent to show you what he can do.', pic: 'Ash'});
+var q2 = new Quote({author: 'Boris Spassky', content: 'The best indicator of a chess player form is his ability to sense the climax of the game.', pic: 'elm'});
+var q3 = new Quote({author: 'V. Anand', content: 'Nowadays, when you are not a grandmaster at 14, you can forget about it.', pic: 'Ivy'});
+var q4 = new Quote({author: 'Magnus Carlsen', content: 'Some people think that if their opponent plays a beautiful game, it’s OK to lose. I don’t. You have to be merciless.', pic: 'oak'});
 
 q1.save(function(err) {});
 q2.save(function(err) {});
@@ -34,7 +42,7 @@ p1.save(function(err) {});
 p2.save(function(err) {});
 p3.save(function(err) {});
 
-User.findOne({email: 'foo@bar.org'} ,function (err, user) {
+User.findOne({email: 'foo11@bar.org'} ,function (err, user) {
     var fooId = user.id;
     var g1 = new Game({
         user: fooId,
@@ -104,5 +112,3 @@ client.indices.create({
         });
     });
 });
-
-

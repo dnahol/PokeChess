@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-warning ">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-gears fa-2x"></i> Gotta Buy Em All!&trade;
+</h3>
+            </div>
+            <form id="userSearchForm" role="form">
+                <div class="panel-body">
+                    <p> Buy Some Pokemon to improve your rank! </p>
+                </div>
+                <div class="panel-footer">
+                  <h4>Please select your payment method:<br>
+<i class="fa fa-cc-amex fa-lg"></i>
+<i class="fa fa-cc-stripe fa-lg"></i>
+<i class="fa fa-cc-discover fa-lg"></i>
+<i class="fa fa-cc-diners-club fa-lg"></i>
+<i class="fa fa-cc-jcb fa-lg"></i>
+<i class="fa fa-btc fa-lg"></i>
+                  </h4>
+                    <p>
+                        <button id="searchUserFormSubmit" type="button" class="btn btn-default center-block"><i class="fa fa-cart-plus"></i> Gotta Buy Em All!&trade;</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="panel panel-danger">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><i class="fa fa-trophy fa-5x"></i><a style="color:crimson;"><strong>PokeChess&trade; Master Ranking</strong></a></div>
+        <table id="foundUsersTable" class="table table-bordered table-striped table-condensed table-hover">
+            <thead>
+                <tbody>
+                    {{#each users}}
+                        <tr>
+                            <td colspan="5">
+                                <div class="text-center">Name: {{name}}</div>
+                            </td>
+                            <td colspan="5">
+                                <div class="text-center">Email: {{email}}</div>
+                            </td>
+                            <td colspan="5">
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal">
+                                        View PokeRank&trade;
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                </tfoot>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="pokeRankPopup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pokemon</h4>
+            </div>
+            <div class="modal-body">
+                <p id="pokeRank"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="/" class="btn btn-danger">Return to home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

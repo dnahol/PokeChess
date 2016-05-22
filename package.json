@@ -7,10 +7,13 @@
   "license": "MIT",
   "main": "app.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node app.js",
-  "postinstall": "bower i"
-},
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "postinstall": "bower i"
+  },
+  "engines": {
+    "node": "5.10.1"
+  },
   "dependencies": {
     "body-parser": "~1.8.1",
     "bson": "^0.4.23",

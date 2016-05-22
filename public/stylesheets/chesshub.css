@@ -153,6 +153,10 @@ h3 {
     text-shadow: 1px 1px 1px #ccc;
 }
 .fa-cc-stripe:before {
+    color: hotpink;
+    text-shadow: 1px 1px 1px #ccc;
+}
+.fa-cc-stripe:hover {
     color: crimson;
     text-shadow: 1px 1px 1px #ccc;
 }

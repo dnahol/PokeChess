@@ -1,24 +1,28 @@
-<div class="col-xs-4" id="videochat"></div>
 
-<script src="https://static.opentok.com/v2/js/opentok.js" charset="utf-8"></script>
-<script charset="utf-8">
-var apiKey = '45593952';
-var sessionId = '1_MX40NTU5Mzk1Mn5-MTQ2MzkyNjU1MzI5NX5Sbkh2bjFXOFd2RVdFblZ2ZHJTdXc1aWV-fg';
-var token = 'T1==cGFydG5lcl9pZD00NTU5Mzk1MiZzaWc9YjEwZmNiNjY1YWRkM2E0NTc5OTVmOTdlMTlhODhkMWUwMjY4MTU4MDpzZXNzaW9uX2lkPTFfTVg0ME5UVTVNemsxTW41LU1UUTJNemt5TmpVMU16STVOWDVTYmtoMmJqRlhPRmQyUlZkRmJsWjJaSEpUZFhjMWFXVi1mZyZjcmVhdGVfdGltZT0xNDYzOTI2NjQxJm5vbmNlPTAuOTQ5MTI1MTM5NTA4Mzk2NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDY2NTE4NjQw';
-var publisher = OT.initPublisher('videochat', {insertMode: 'append', name: 'Player: {{side}}', style: {nameDisplayMode: 'on'} });
-var session = OT.initSession(apiKey, sessionId)
-.on('streamCreated', function(event) {
-  // Subscribers: others
-  session.subscribe(event.stream, 'videochat', {insertMode: 'append', style: {nameDisplayMode: 'on'}});
-})
-.connect(token, function(error) {
-  // Publisher: us
-  session.publish(publisher);
-});
-</script>
 
 
 <div class="row">
+
+  <div class="col-md-5" id="videochat"></div>
+
+  <script src="https://static.opentok.com/v2/js/opentok.js" charset="utf-8"></script>
+  <script charset="utf-8">
+  var apiKey = '45593952';
+  var sessionId = '1_MX40NTU5Mzk1Mn5-MTQ2MzkyNjU1MzI5NX5Sbkh2bjFXOFd2RVdFblZ2ZHJTdXc1aWV-fg';
+  var token = 'T1==cGFydG5lcl9pZD00NTU5Mzk1MiZzaWc9YjEwZmNiNjY1YWRkM2E0NTc5OTVmOTdlMTlhODhkMWUwMjY4MTU4MDpzZXNzaW9uX2lkPTFfTVg0ME5UVTVNemsxTW41LU1UUTJNemt5TmpVMU16STVOWDVTYmtoMmJqRlhPRmQyUlZkRmJsWjJaSEpUZFhjMWFXVi1mZyZjcmVhdGVfdGltZT0xNDYzOTI2NjQxJm5vbmNlPTAuOTQ5MTI1MTM5NTA4Mzk2NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDY2NTE4NjQw';
+  var publisher = OT.initPublisher('videochat', {insertMode: 'append', name: 'Player: {{side}}', style: {nameDisplayMode: 'on'} });
+  var session = OT.initSession(apiKey, sessionId)
+  .on('streamCreated', function(event) {
+    // Subscribers: others
+    session.subscribe(event.stream, 'videochat', {insertMode: 'append', style: {nameDisplayMode: 'on'}});
+  })
+  .connect(token, function(error) {
+    // Publisher: us
+    session.publish(publisher);
+  });
+  </script>
+
+
 
   <div id="board" class="col-md-7" data-token="{{ token }}" data-side="{{ side }}"></div>
 
@@ -52,46 +56,46 @@ var session = OT.initSession(apiKey, sessionId)
       <div class="panel-footer">
         <button id="resignButton" type="button" class="btn btn-danger center-block">Resign</button>
       </div>
-        <div class="panel panel-info ">
-            <div class="panel-heading">
-                <h4 class="panel-title">Players</h4>
-            </div>
-            <div class="panel-body">
-                <p >
-                    <img src="/bower_components/chessboardjs/img/chesspieces/wikipedia/bK.png" class="side-img" alt="Black"/>
-                    <span id="player-black">Black</span> <span class="turn" id="turn-b">&nbsp;<i class=""></i></span>
-		    <span id="timeb" >{{time}}</span>
-                </p>
-                <p>
-                    <img src="/bower_components/chessboardjs/img/chesspieces/wikipedia/wK.png" class="side-img" alt="White"/>
-                    <span id="player-white">White</span> <span class="turn" id="turn-w">&nbsp;<i class=""></i></span>
-		    <span id="timew" >{{time}}</span>
-                </p>
-            </div>
+      <div class="panel panel-info ">
+        <div class="panel-heading">
+          <h4 class="panel-title">Players</h4>
         </div>
+        <div class="panel-body">
+          <p >
+            <img src="/bower_components/chessboardjs/img/chesspieces/wikipedia/bK.png" class="side-img" alt="Black"/>
+            <span id="player-black">Black</span> <span class="turn" id="turn-b">&nbsp;<i class=""></i></span>
+            <span id="timeb" >{{time}}</span>
+          </p>
+          <p>
+            <img src="/bower_components/chessboardjs/img/chesspieces/wikipedia/wK.png" class="side-img" alt="White"/>
+            <span id="player-white">White</span> <span class="turn" id="turn-w">&nbsp;<i class=""></i></span>
+            <span id="timew" >{{time}}</span>
+          </p>
+        </div>
+      </div>
 
-        <div class="panel panel-info ">
-            <div class="panel-heading">
-                <h4 class="panel-title">PokeMoves&trade;</h4>
-            </div>
-            <div class="panel-body">
-                <textarea id="pgn"></textarea>
-            </div>
-            <div class="panel-footer">
-                <button id="resignButton" type="button" class="btn btn-danger center-block">Resign</button>
-            </div>
+      <div class="panel panel-info ">
+        <div class="panel-heading">
+          <h4 class="panel-title">PokeMoves&trade;</h4>
         </div>
-        <div class="panel panel-info ">
-            <div class="panel-heading">
-                <h4 class="panel-title">Clock</h4>
-            </div>
-            <div id="showClock" class="panel-body clock">
-              <textarea id="clock"></textarea>
-            </div>
-            <div class="panel-footer">
-                <button id="funButton" type="button" class="btn btn-danger center-block">Resign</button>
-            </div>
+        <div class="panel-body">
+          <textarea id="pgn"></textarea>
         </div>
+        <div class="panel-footer">
+          <button id="resignButton" type="button" class="btn btn-danger center-block">Resign</button>
+        </div>
+      </div>
+      <div class="panel panel-info ">
+        <div class="panel-heading">
+          <h4 class="panel-title">Clock</h4>
+        </div>
+        <div id="showClock" class="panel-body clock">
+          <textarea id="clock"></textarea>
+        </div>
+        <div class="panel-footer">
+          <button id="funButton" type="button" class="btn btn-danger center-block">Resign</button>
+        </div>
+      </div>
     </div>
 
   </div>

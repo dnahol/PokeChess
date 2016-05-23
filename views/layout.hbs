@@ -28,17 +28,17 @@
           </a>
         </div> -->
             <li><a style="padding:1px 1px;"href="/" title="Go to home page"><img height="37.89" alt="Brand" src="pikachu.png"></a></li>
-            <li class="{{#if isHomePage}} active {{/if}}"><a href="/" title="Go to home page"><i class="fa fa-home"></i> Home</a></li>
-            <li class="{{#if isPlayPage}} active {{/if}}"><a href="/play" title="Create a new game"><i class="fa fa-gamepad"></i> Play</a></li>
-            <li class="{{#if isTvPage}} active {{/if}}"><a href="/tv" title="Watch live games"><i class="fa fa-puzzle-piece"></i> Puzzles</a></li>
-            <li class="{{#if isRandPage}} active {{/if}}"><a href="/rand" title="play computer games"><i class="fa fa-random"></i> Poke Random Chess&trade;</a></li>
-            <li class="{{#if isSearchPage}} active {{/if}}"><a href="/search" title="Search a game"><i class="fa fa-search"></i> Search</a></li>
-            <li class="{{#if isRankPage}} active {{/if}}"><a href="/rank"><i class="fa fa-bar-chart"></i> Player Rank</a></li>
+            <li class="{{#if isHomePage}} active {{/if}}"><a href="/" title="Go to home page"><i class="fa fa-home {{#if isHomePage}}fa-spin {{/if}}"></i> Home</a></li>
+            <li class="{{#if isPlayPage}} active {{/if}}"><a href="/play" title="Create a new game"><i class="fa fa-gamepad {{#if isPlayPage}} fa-spin {{/if}}"></i> Play</a></li>
+            <li class="{{#if isTvPage}} active {{/if}}"><a href="/tv" title="Watch live games"><i class="fa fa-puzzle-piece {{#if isTvPage}} fa-spin {{/if}}"></i> Puzzles</a></li>
+            <li class="{{#if isRandPage}} active {{/if}}"><a href="/rand" title="play computer games"><i class="fa fa-random {{#if isRandPage}} fa-spin {{/if}}"></i> pokeRandomChess&trade;</a></li>
+            <li class="{{#if isSearchPage}} active {{/if}}"><a href="/search" title="Search a game"><i class="fa fa-search {{#if isSearchPage}} fa-spin {{/if}}"></i> Search</a></li>
+            <li class="{{#if isRankPage}} active {{/if}}"><a href="/rank"><i class="fa fa-bar-chart{{#if isRankPage}} fa-spin {{/if}}"></i> Player Rank</a></li>
             {{#if user}}
-            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user"></i> {{ user.name }}</a></li>
+            <li class="{{#if isAccountPage}} active {{/if}}"><a href="/account" title="My account"><span id="loggedUser" data-user="{{ user.name }}"></span><i class="fa fa-user {{#if isAccountPage}} fa-spin {{/if}}"></i> {{ user.name }}</a></li>
             <li><a href="/logout" title="Sign out"><i class="fa fa-sign-out"></i></a></li>
             {{else}}
-            <li class="{{#if isLoginPage}} active {{/if}}"><a href="/login"><i class="fa fa-sign-in"></i> Player login</a></li>
+            <li class="{{#if isLoginPage}} active {{/if}}"><a href="/login"><i class="fa fa-sign-in {{#if isLoginPage}} fa-spin {{/if}}"></i> Player login</a></li>
             {{/if}}
 
         </ul>

@@ -16,7 +16,7 @@ var math = require('./math');
 
 var mongoose = require('mongoose');
 
-const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/poke-chess';
+const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost/poke-chess-mine';
 
 mongoose.connect(MONGOURL, err => {
   console.log(err || `MongoDB connected to ${MONGOURL}`);

@@ -47,7 +47,7 @@ app.controller('chessCtrl', function($scope, Service, mySocket, $timeout, Auth) 
 
     //change puzzle
     $("#nextPuzzle").click(function (){
-        updateBoard();
+      updateBoard();
     });
 
     function updateBoard(){
@@ -100,11 +100,24 @@ app.controller('chessCtrl', function($scope, Service, mySocket, $timeout, Auth) 
 
     $scope.waitText = 'Your timer has started! You have 20 seconds!'
 
-    $timeout(function () {
-    mySocket.emit('timeout', score);
+    $scope.counter = 20;
+    $scope.onTimeout = function() {
+      $scope.counter--;
+      mytimeout = $timeout($scope.onTimeout,1000);
+    }
+    var mytimeout = $timeout($scope.onTimeout,1000);
 
-    $scope.waitText='Your time is up! Waiting for oponent to finish.'
-  }, 20000);
+
+
+
+    
+
+
+    $timeout(function () {
+      mySocket.emit('timeout', score);
+
+      $scope.waitText='Your time is up! Waiting for oponent to finish.'
+    }, 20000);
   }
 
 

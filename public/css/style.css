@@ -7,6 +7,16 @@ gray: #d9d9d9;
 */
 
 
+
+.home-btn {
+	width: 100%;
+	height: 300px;
+	font-size: 2em;
+	padding-top: 10%;
+	padding-bottom: 10%;
+
+}
+
 .hidden {
 	display: none;
 }
@@ -38,6 +48,7 @@ body {
 h1 {
 	font-family: Kalam;
 	color: #ff3333;
+	text-shadow: 0 0 3px darkblue;
 	font-size: 50px;
 	font-weight: bold;
 }
@@ -49,7 +60,7 @@ h1 {
 }
 
 .panel-heading {
-color: ;
+	color: ;
 }
 
 .btn-info {

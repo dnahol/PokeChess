@@ -73,7 +73,6 @@
         <div ng-if='player==2'>
           <button class='btn btn-warning btn-block' ng-click='startTimer(); start=true'>Begin Timer</button>
           <br>
-          <h1 ng-if='start' class="panel-title text-center">{{question.num1}} * {{question.num2}} = __</h1>
         </div>
 
 
@@ -86,6 +85,7 @@
         </div>
 
         <div class="col-xs-3">
+          {{counter}}
           <img class="clock-image" alt="clock" src="clock.png">
         </div>
 

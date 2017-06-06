@@ -1,8 +1,20 @@
 
-<h1>Hello {{currentUser.username}}</h1>
 <br>
-<h3>Play PokeChess to Catch them all!</h3>
 
 
-<button ui-sref="login">Login</button>
-<button ui-sref="register">Register</button>
+<div class="container">
+  <h1>Play PokeChess to Catch them all!</h1>
+  <br>
+  <div class="row">
+    <div class="col-lg-4">
+
+      <button class='home-btn btn btn-sq-xl btn-primary' ui-sref="login">
+        <i class="fa fa-sign-in fa-5x"></i><br/>Login and play!
+      </button>
+
+    </div>
+    <div class="col-lg-4">
+
+      <button class='home-btn btn btn-sq-xl btn-success' ui-sref="register">
+        <i class="fa fa-user-plus fa-5x"></i><br/>Register!
+        </button>
